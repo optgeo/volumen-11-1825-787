@@ -1,0 +1,14 @@
+{
+"name": "tiles.mbtiles",
+"description": "tiles.mbtiles",
+"version": "2",
+"minzoom": "14",
+"maxzoom": "16",
+"center": "140.814514,38.348119,16",
+"bounds": "140.795288,38.268376,140.982056,38.414862",
+"type": "overlay",
+"format": "pbf",
+"generator": "tile-join v1.36.0",
+"generator_options": "tippecanoe -f -o tiles.mbtiles '--minimum-zoom=14' '--maximum-zoom=16'; tile-join --force --no-tile-compression '--output-to-directory=docs/zxy' --no-tile-size-limit tiles.mbtiles",
+"json": "{\"vector_layers\": [ { \"id\": \"dem10b\", \"description\": \"\", \"minzoom\": 14, \"maxzoom\": 16, \"fields\": {\"a\": \"Number\"} }, { \"id\": \"dem5a\", \"description\": \"\", \"minzoom\": 16, \"maxzoom\": 16, \"fields\": {\"a\": \"Number\"} } ],\"tilestats\": {\"layerCount\": 2,\"layers\": [{\"layer\": \"dem10b\",\"count\": 6521913,\"geometry\": \"Polygon\",\"attributeCount\": 1,\"attributes\": [{\"attribute\": \"a\",\"count\": 102,\"type\": \"number\",\"values\": [0,10,100,105,110,115,120,125,130,135,140,145,15,150,155,160,165,170,175,180,185,190,195,20,200,205,210,215,220,225,230,235,240,245,25,250,255,260,265,270,275,280,285,290,295,30,300,305,310,315,320,325,330,335,340,345,35,350,355,360,365,370,375,380,385,390,395,40,400,405,410,415,420,425,430,435,440,445,45,450,455,460,465,470,475,480,485,490,495,5,50,500,505,55,60,65,70,75,80,85],\"min\": 0,\"max\": 505}]},{\"layer\": \"dem5a\",\"count\": 6940596,\"geometry\": \"Polygon\",\"attributeCount\": 1,\"attributes\": [{\"attribute\": \"a\",\"count\": 64,\"type\": \"number\",\"values\": [-9995,0,10,100,105,110,115,120,125,130,135,140,145,15,150,155,160,165,170,175,180,185,190,195,20,200,205,210,215,220,225,230,235,240,245,25,250,255,260,265,270,275,280,285,290,295,30,300,305,310,35,40,45,5,50,55,60,65,70,75,80,85,90,95],\"min\": -9995,\"max\": 310}]}]}}"
+}

@@ -1,0 +1,98 @@
+{
+  "version": 8,
+  "center": [
+    140.814514,
+    38.348119
+  ],
+  "zoom": 16,
+  "sources": {
+    "v": {
+      "type": "vector",
+      "minzoom": 14,
+      "maxzoom": 16,
+      "attribution": "国土地理院ベクトルタイル提供実験",
+      "tiles": [
+        "https://optgeo.github.io/volumen-11-1825-787/zxy/{z}/{x}/{y}.pbf"
+      ]
+    },
+    "i": {
+      "type": "raster",
+      "minzoom": 2,
+      "maxzoom": 18,
+      "attribution": "国土地理院",
+      "tiles": [
+        "https://maps.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256
+    }
+  },
+  "layers": [
+    {
+      "id": "sky",
+      "type": "sky",
+      "paint": {
+        "sky-type": "atmosphere"
+      }
+    },
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#607d8b"
+      }
+    },
+    {
+      "id": "pale",
+      "type": "raster",
+      "source": "i"
+    },
+    {
+      "id": "dem10b",
+      "type": "fill-extrusion",
+      "source": "v",
+      "source-layer": "dem10b",
+      "minzoom": 14,
+      "maxzoom": 22,
+      "paint": {
+        "fill-extrusion-base": [
+          "get",
+          "a"
+        ],
+        "fill-extrusion-height": [
+          "+",
+          [
+            "get",
+            "a"
+          ],
+          5
+        ],
+        "fill-extrusion-color": "#3f51b5",
+        "fill-extrusion-opacity": 0.7
+      }
+    },
+    {
+      "id": "dem5a",
+      "type": "fill-extrusion",
+      "source": "v",
+      "source-layer": "dem5a",
+      "minzoom": 16,
+      "maxzoom": 22,
+      "paint": {
+        "fill-extrusion-base": [
+          "get",
+          "a"
+        ],
+        "fill-extrusion-height": [
+          "+",
+          [
+            "get",
+            "a"
+          ],
+          4.99
+        ],
+        "fill-extrusion-color": "#ffeb3b",
+        "fill-extrusion-opacity": 0.7
+      }
+    }
+  ]
+}
